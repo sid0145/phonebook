@@ -1,0 +1,24 @@
+  
+    <mat-accordion multi="true" *ngIf="users.length > 0">
+      <mat-expansion-panel *ngFor="let user of users">
+        <mat-expansion-panel-header>
+          <h4>{{user.name }} </h4>
+        </mat-expansion-panel-header>
+        <h4><mat-action-row><p class="date">{{user.dob | date}}</p>
+          <button matbutton color="primary"><a [routerLink]="['/edit',user.id]"><mat-icon>edit</mat-icon></a></button>
+            <button mat-button><mat-icon color="accent" (click)="onDelete(user.id)">delete</mat-icon></button>
+          </mat-action-row>
+        </h4>
+        <mat-card>
+          <mat-grid-list cols="2"  rowHeight="50px">
+            <mat-grid-tile><mat-icon>phone</mat-icon><h3>{{user.phone}}</h3></mat-grid-tile>
+            <mat-grid-tile><mat-icon>mail</mat-icon><h3>{{user.email}}</h3></mat-grid-tile>
+          </mat-grid-list>
+        </mat-card>
+      </mat-expansion-panel>
+    </mat-accordion>
+   
+    <p *ngIf="users.length <= 0"> no users added</p>
+    
+
+

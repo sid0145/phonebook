@@ -1,0 +1,16 @@
+#mat1{
+    width: 60%;
+    margin: auto;
+    border-color: 1px solid black;
+}
+mat-form-field{
+    width: 100%;
+}
+mat-toolbar{
+    width: 63%;
+    margin-top: 0%;
+    margin: auto;
+}
+.main{
+    display: flex;
+}

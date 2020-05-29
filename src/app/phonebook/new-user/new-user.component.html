@@ -1,0 +1,37 @@
+  
+  <mat-card>
+    <form #f="ngForm" (ngSubmit)="onAdd(f)">
+      <button (click)="onBack()"><mat-icon color="accent">clear</mat-icon> </button>
+   <p>
+    <mat-form-field>
+      <mat-label>name</mat-label>
+      <input class="input" type="text" matInput ngModel #name="ngModel" name="name">
+   </mat-form-field>
+   </p>
+   <p>
+    <mat-form-field>
+      <mat-label>Choose a birth date</mat-label>
+      <input class="input" matInput [matDatepicker]="picker" ngModel #date="ngModel" name="date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+   </p>
+   <p>
+     <mat-form-field>
+       <mat-label>enter a phone number</mat-label>
+       <input class="input" matInput ngModel  #phone="ngModel" name="phone">
+     </mat-form-field>
+   </p>
+   <p>
+    <mat-form-field>
+      <mat-label>enter a email</mat-label>
+      <input class="input" matInput ngModel #email="ngModel" name="email">
+    </mat-form-field>
+  </p>
+  <mat-action-row>
+    <button mat-raised-button color="primary" type='submit'>add</button>
+  </mat-action-row>
+  
+</form>
+
+  </mat-card>

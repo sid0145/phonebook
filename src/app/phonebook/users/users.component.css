@@ -1,0 +1,16 @@
+mat-card{
+    margin: auto;
+}
+mat-form-field{
+    width: 100%;
+}
+.date{
+  float: left;
+color:red;
+}
+mat-icon{
+  margin-left: 20px;
+}
+p{
+  margin-right: 400px;
+}
